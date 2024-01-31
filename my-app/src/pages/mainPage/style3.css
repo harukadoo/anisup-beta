@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+:root {
+    --index: calc(1vw + 1vh)
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #120A14;
+    overflow-x: hidden;
+}
+
+.inner__container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.main {
+    width: 100%;
+    height: max-content;
+    background-color: #292c29;
+}
+
+.main__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-background__container {
+    width: 100%;
+    height: calc(var(--index) * 18);
+    background-image: url('../images/main-wallpaper4.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content {
+    width: 92%;
+    background-color: #120A14;
+    margin-top: calc(var(--index) * -2.6);
+}
+
+.main-content__container {
+    width: 100%;
+}
+
+.main-title {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-title__container {
+    font-size: calc(var(--index) * 3.5);
+    font-weight: 700;
+    margin-top: calc(var(--index) * -2);
+}
+
+.main-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-search__container {
+    width: 36%;
+    margin-top: calc(var(--index) * .9);
+    display: flex;
+    align-items: center;
+}
+
+.main-search__input {
+    width: 100%;
+    background-color: #ffffff30;
+    border: 3px solid #fff;
+    font-size: calc(var(--index) * 1);
+    font-weight: 600;
+    outline-color: #fff;
+    padding: calc(var(--index) * .7) calc(var(--index) * 1.5);
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+}
+
+.main-search__btn {
+    width: min-content;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-size: calc(var(--index) * .9);
+    padding: 6px calc(var(--index) * .45);
+    margin-left: calc(var(--index) * -3.1);
+}
+
+.main-search__btn:hover {
+    background-color: #120a1434;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+.main-content__popular-anime {
+    width: calc(100% - 4vw);
+    height: calc(var(--index) * 14);
+    margin: calc(var(--index) * 3.2) 2vw 0 2vw;
+    overflow: hidden;
+}
+
+.popular-anime__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.popular-anime__anime-titles {
+    height: 100%;
+    display: flex;
+    gap: 1.5vw;
+    animation: slideShow1 18s infinite;
+    -webkit-animation: slideShow1 15s infinite;
+}
+
+.popular-anime__anime {
+    width: calc(var(--index) * 8.8);
+    height: 100%;
+    flex-shrink: 0;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+}
+
+@keyframes slideShow1 {
+    0%, 10% {
+        transform: translateX(0);
+    }
+
+    20%, 30% {
+        transform: translateX(calc(var(--index) * -10));
+        -webkit-transform: translateX(calc(var(--index) * -10));
+        -moz-transform: translateX(calc(var(--index) * -10));
+        -ms-transform: translateX(calc(var(--index) * -10));
+        -o-transform: translateX(calc(var(--index) * -10));
+}
+
+    40%, 50% {
+        transform: translateX(calc(var(--index) * -20));
+        -webkit-transform: translateX(calc(var(--index) * -20));
+        -moz-transform: translateX(calc(var(--index) * -20));
+        -ms-transform: translateX(calc(var(--index) * -20));
+        -o-transform: translateX(calc(var(--index) * -20));
+}
+
+    60%, 70% {
+        transform: translateX(calc(var(--index) * -30));
+        -webkit-transform: translateX(calc(var(--index) * -30));
+        -moz-transform: translateX(calc(var(--index) * -30));
+        -ms-transform: translateX(calc(var(--index) * -30));
+        -o-transform: translateX(calc(var(--index) * -30));
+}
+
+    80%, 90% {
+        transform: translateX(calc(var(--index) * -40));
+        -webkit-transform: translateX(calc(var(--index) * -40));
+        -moz-transform: translateX(calc(var(--index) * -40));
+        -ms-transform: translateX(calc(var(--index) * -40));
+        -o-transform: translateX(calc(var(--index) * -40));
+}
+
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+.popular-anime__gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(207,80,239,0) 50%, rgba(29, 29, 29, 0.948) 97%);
+}
+
+.popular-anime__img{
+    height: 100%;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 calc(var(--index) * .4) calc(var(--index) * .44);
+    position: relative;
+}
+
+.popular-anime__img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.popular-anime__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0; 
+    transition: opacity .4s ease-out;
+    z-index: 100;
+}
+
+.popular-anime__img::after {
+    content: "\f04b"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: calc(var(--index) * 2); 
+    color: #ffffff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .4s ease-out;
+    z-index: 200;
+}
+
+.popular-anime__img:hover::before {
+    opacity: .2;
+}
+
+.popular-anime__img:hover::after {
+    opacity: 1;
+}
+
+.popular-anime__score{
+    align-self: flex-end;
+    padding: calc(var(--index) * .18) calc(var(--index) * .28) calc(var(--index) * .18) calc(var(--index) * .4);
+    background-color: #FFC24C;
+    z-index: 2;
+}
+
+.popular-anime__score i, .popular-anime__score span{
+    color: black;
+    font-weight: 700;
+    margin-right: 4px;
+    font-size: calc(var(--index) * .7);
+
+}
+
+.popular-anime__name{
+    font-weight: 600;
+    font-size: calc(var(--index) * .7);
+    z-index: 2;
+    text-align: center;
+}
+
+.popular-anime__link{
+    text-decoration: none;
+    font-size: calc(var(--index) * .75);
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.popular-anime__link:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+.main-content__main-content{
+    width: 100%;
+    padding: calc(var(--index) * 3.8) 2vw calc(var(--index) * 3.2) 2vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.content-left{
+    width: 50%;
+}
+
+.newest-anime__title {
+    font-size: calc(var(--index) * 1.5);
+    font-weight: 700;
+}
+
+.newest-anime__anime {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1.3);
+    margin-top: calc(var(--index) * 1.3);
+}
+
+.anime__container {
+    height: calc(var(--index) * 11);
+    display: flex;
+    gap: calc(var(--index) * .9);
+}
+
+.anime__image {
+    display: block;
+    width: calc(var(--index) * 8);
+    background-color: gray;
+    position: relative;
+}
+
+.anime__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.anime__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0; 
+    transition: opacity .4s ease-out;
+    z-index: 100;
+}
+
+.anime__image::after {
+    content: "\f04b"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: calc(var(--index) * 1.8); 
+    color: #ffffff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .4s ease-out;
+    z-index: 200;
+}
+
+.anime__image:hover::before {
+    opacity: .2;
+}
+
+.anime__image:hover::after {
+    opacity: 1;
+}
+
+.anime__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.anime__name {
+    font-size: calc(var(--index) * .9);
+    font-weight: 700;
+    width: calc(var(--index) * 14);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime__jpname {
+    font-size: calc(var(--index) * .8);
+    font-weight: 700;
+    opacity: .7;
+    width: calc(var(--index) * 14);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime__release,
+.anime__status,
+.anime__rating {
+    font-size: calc(var(--index) * .7);
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.anime__status span{
+    color: #caff99;
+    margin-left: 5px;
+}
+
+.anime__rating {
+    color: #FFC24C;
+    margin-top: calc(var(--index) * .7);
+}
+
+.anime__rating i {
+    color: #FFC24C;
+    margin-right: 5px;
+    font-size: calc(var(--index) * .8);
+}
+
+.anime__save-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-size: calc(var(--index) * .9);
+}
+
+.content-right {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--index) * 5.9);
+}
+
+.genres {
+    width: 100%;
+}
+
+.genres__title {
+    font-size: calc(var(--index) * 1.5);
+    font-weight: 700;
+    color: #FFC24C;
+    margin-bottom: calc(var(--index) * .45);
+}
+
+.genres__container span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFC24C;
+    color: #FFC24C;
+}
+
+.genres-options__container {
+    margin-top: calc(var(--index) * 1.3);
+}
+
+.genres-options__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.options__btn {
+    text-decoration: none;
+    color: #120A14;
+    background-color: #fff;
+    border: 3.5px solid #FFC24C;
+    font-size: calc(var(--index) * .9);
+    font-weight: 600;
+    padding: calc(var(--index) * .3) calc(var(--index) * 1);
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.options__btn:hover {
+    text-decoration: underline;
+}
+
+.recommended {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recommended__container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .7);
+}
+
+.recommended__title {
+    width: min-content;
+    font-size: calc(var(--index) * 1.3);
+    font-weight: 700;
+}
+
+.recommendations {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recommendations__container {
+    display: flex;
+    animation: slideShow 18s infinite;
+    -webkit-animation: slideShow 18s infinite;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    55% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.recommendations__content {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.recommendations__img {
+    display: block;
+    width: 100%;
+    height: calc(var(--index) * 22);
+    background-color: #FFC24C;
+    margin-bottom: 6px;
+    cursor: pointer;
+    position: relative;
+
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+}
+
+.recommendations__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.recommendations__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0; 
+    transition: opacity .4s ease-out;
+    z-index: 100;
+}
+
+.recommendations__img::after {
+    content: "\f04b"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: calc(var(--index) * 3); 
+    color: #ffffff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .4s ease-out;
+    z-index: 200;
+}
+
+.recommendations__img:hover::before {
+    opacity: .2;
+}
+
+.recommendations__img:hover::after {
+    opacity: 1;
+}
+
+.recommendations__title {
+    font-size: calc(var(--index) * .8);
+    font-weight: 500;
+}
+
+.main-content__about{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: calc(var(--index) * 1.6) 7vw calc(var(--index) * 1.6) 7vw;
+    width: 100%;
+    gap: calc(var(--index) * .8);
+    background-color: #292c29;
+}
+
+.main-content__about-title{
+    font-size: calc(var(--index) * .8);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.main-content__about-description{
+    text-align: center;
+    font-size: calc(var(--index) * .7);
+    opacity: .8;
+}
+

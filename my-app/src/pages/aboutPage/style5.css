@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+:root {
+    --index: calc(1vw + 1vh)
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #120A14;
+    overflow-x: hidden;
+}
+
+.inner__container {
+    width: 100%;
+    height: 100%;
+
+}
+.about-main {
+    width: 100%;
+    height: max-content;
+}
+
+.about-main__container {
+    width: 100%;
+    height: 100%;
+}
+
+.about-main-background__container {
+    width: 100%;
+    height: calc(var(--index) * 14);
+    background-image: url('../images/main-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-main-title {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+.about-main-title__container {
+    font-size: calc(var(--index) * 3.5);
+    font-weight: 700;
+    margin-top: calc(var(--index) * -2);
+}
+
+.about-main-content{
+    width: 100%;
+}
+
+.about-main-content__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--index) * 2.5);
+    padding: calc(var(--index) * 3.2) 4vw calc(var(--index) * 3.2) 4vw; 
+}
+
+.about-main-text{
+    width: 60%;
+}
+
+.about-main-text__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--index) * 1);
+}
+
+.about-main-text__container p{
+    text-align: center;
+    font-size: calc(var(--index) * .8);
+    color: #ffffffdf;
+    font-weight: 500;
+}
+
+.support-section__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--index) * .8);
+}
+
+.support-section__title{
+    font-weight: 600;
+    font-size: calc(var(--index) * 1.2);
+    color: #ffffffdf;
+}
+
+.support-section__nav{
+    display: flex;
+    gap: 1.4vw;
+}
+
+.support-section__nav a{
+    font-size: calc(var(--index) * 1.5);
+    color: #ffffffdf;
+}
