@@ -10,7 +10,7 @@ interface IWatchedBtn {
 export const WatchedBtn = ({ userId, animeId, isWatched, setIsWatched }: IWatchedBtn) => {
     const toggleIsWatched = async () => {
         try{
-            const result = await axios.post(`http://localhost:3001/watched-anime/${userId}/${animeId}`);
+            const result = await axios.post(`https://anisup-beta.onrender.com/watched-anime/${userId}/${animeId}`);
 
             if (result.data.success) {
                 setIsWatched((prevIsWatched: boolean) => !prevIsWatched);

@@ -29,7 +29,7 @@ export const HomePage = () => {
     useEffect(() => {
         const getUserData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/user/${user}`);
+                const response = await axios.get(`https://anisup-beta.onrender.com/user/${user}`);
                 setUserData(response.data)
             } catch (error) {
                 console.error('Помилка при запиті до серверу:', error);

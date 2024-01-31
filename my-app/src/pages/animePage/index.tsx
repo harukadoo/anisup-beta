@@ -83,7 +83,7 @@ export const AnimePage = () => {
     useEffect(() => {
         const checkAnimeNav = async () => {
             try {
-                const savedAnimeResult = await axios.post(`http://localhost:3001/check-anime-nav/${user}/${id}`);
+                const savedAnimeResult = await axios.post(`https://anisup-beta.onrender.com/check-anime-nav/${user}/${id}`);
                 setIsBookmarked(savedAnimeResult.data.isSaved);
                 setIsLiked(savedAnimeResult.data.isLiked);
                 setIsWatched(savedAnimeResult.data.isWatched);

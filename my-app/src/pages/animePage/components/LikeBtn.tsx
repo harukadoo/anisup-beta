@@ -22,7 +22,7 @@ export const LikeBtn = ({ usersLikes, animeData, userId, animeId, isLiked, setIs
 
     const toggleLikes = async () => {
         try {
-            const result = await axios.post(`http://localhost:3001/like-anime/${userId}/${animeId}`);
+            const result = await axios.post(`https://anisup-beta.onrender.com/like-anime/${userId}/${animeId}`);
             if (result.data.success) {
                 setIsLiked((prevState: boolean) => !prevState);
 

@@ -13,7 +13,7 @@ export const SignInPage = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:3001/sign-in', { email, password });
+      const result = await axios.post('https://anisup-beta.onrender.com/sign-in', { email, password });
 
       if (result.data.status === "Success") {
         const userId = result.data._id;

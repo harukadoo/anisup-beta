@@ -15,7 +15,7 @@ export const SavedAnime = ({ user, savedAnime, setSavedAnime, savedAnimeDetails,
     useEffect(() => {
         const getSavedAnimeData = async () => {
             try {
-                const userResponse = await axios.get(`http://localhost:3001/get-saved-anime/${user}`);
+                const userResponse = await axios.get(`https://anisup-beta.onrender.com/get-saved-anime/${user}`);
                 const userData = userResponse.data;
 
                 if (userData.success) {

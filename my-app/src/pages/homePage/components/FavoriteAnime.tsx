@@ -15,7 +15,7 @@ export const FavoriteAnime = ({ user, favAnime, setFavAnime, favAnimeDetails, se
     useEffect(() => {
         const getFavAnimeData = async () => {
             try {
-                const userResponse = await axios.get(`http://localhost:3001/get-fav-anime/${user}`);
+                const userResponse = await axios.get(`https://anisup-beta.onrender.com/get-fav-anime/${user}`);
                 const userData = userResponse.data;
 
                 if (userData.success) {

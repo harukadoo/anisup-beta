@@ -15,7 +15,7 @@ export const WatchedAnime = ({ user, watchedAnime, setWatchedAnime, watchedAnime
     useEffect(() => {
         const getWatchedAnimeData = async () => {
             try {
-                const userResponse = await axios.get(`http://localhost:3001/get-watched-anime/${user}`);
+                const userResponse = await axios.get(`https://anisup-beta.onrender.com/get-watched-anime/${user}`);
                 const userData = userResponse.data;
 
                 if (userData.success) {

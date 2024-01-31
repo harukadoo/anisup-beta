@@ -9,7 +9,7 @@ export const NewAnime = ({ id, title, jptitle, year, status, score, image, userI
     useEffect(() => {
         const checkAnimeSaves = async () => {
             try {
-                const savedAnimeResult = await axios.post(`http://localhost:3001/check-anime-nav/${userId}/${id}`);
+                const savedAnimeResult = await axios.post(`https://anisup-beta.onrender.com/check-anime-nav/${userId}/${id}`);
                 setIsBookmarked(savedAnimeResult.data.isSaved);
             } catch (error) {
                 console.error(error);
@@ -21,7 +21,7 @@ export const NewAnime = ({ id, title, jptitle, year, status, score, image, userI
 
     const toggleBookmark = async () => {
         try {
-            const result = await axios.post(`http://localhost:3001/save-anime/${userId}/${id}`);
+            const result = await axios.post(`https://anisup-beta.onrender.com/save-anime/${userId}/${id}`);
 
             if (result.data.success) {
                 setIsBookmarked((prevState: boolean) => !prevState);

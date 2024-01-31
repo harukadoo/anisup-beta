@@ -15,7 +15,7 @@ export const SignUpPage = () => {
     e.preventDefault();
 
     try {
-      const checkUser = await axios.post('http://localhost:3001/sign-up-check', { email });
+      const checkUser = await axios.post('https://anisup-beta.onrender.com/sign-up-check', { email });
 
       if (checkUser.data.exists) {
         setUserExists(true);
@@ -25,7 +25,7 @@ export const SignUpPage = () => {
           return;
           
         } else {
-          const createUser = await axios.post('http://localhost:3001/', { name, email, password, saves: [], favorite: [], watched: []});
+          const createUser = await axios.post('https://anisup-beta.onrender.com/', { name, email, password, saves: [], favorite: [], watched: []});
           const userId = createUser.data._id;
           console.log(createUser);
           navigate(`/main/${userId}`);

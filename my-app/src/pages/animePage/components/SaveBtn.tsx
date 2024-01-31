@@ -22,7 +22,7 @@ export const SaveBtn = ({ usersSaves, animeData, userId, animeId, isBookmarked, 
 
     const toggleBookmark = async () => {
         try {
-            const result = await axios.post(`http://localhost:3001/save-anime/${userId}/${animeId}`);
+            const result = await axios.post(`https://anisup-beta.onrender.com/save-anime/${userId}/${animeId}`);
     
             if (result.data.success) {
                 setIsBookmarked((prevState: boolean) => !prevState);
