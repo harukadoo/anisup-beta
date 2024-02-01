@@ -17,9 +17,17 @@ export const TopAnimePage = () => {
             setPage((prevPage) => {
                 const nextPage = prevPage + 1;
                 axios.get(`https://api.jikan.moe/v4/top/anime?type=tv&movie&page=${nextPage}`)
-                    .then(response => setTopAnime(prevAnime => [...prevAnime, ...response.data.data]))
+                    .then(response => {
+                        const filteredData = response.data.data.map((anime: Interfaces.IResponseData) => ({
+                            id: anime.mal_id,
+                            title: anime.title_english,
+                            score: anime.score,
+                            image: anime.images.jpg.large_image_url,
+                        }));
+                        setTopAnime(prevAnime => [...prevAnime, ...filteredData]);
+                    })
                     .catch(error => console.error('Помилка при запиті до API:', error));
-
+    
                 return nextPage;
             });
         }
@@ -43,6 +51,11 @@ export const TopAnimePage = () => {
     useEffect(() => {
         getTopAnime()
     }, []);
+
+    useEffect(() => {
+        console.log(topAnime);
+        
+    }, [topAnime]);
 
     return (
         <div className="container">

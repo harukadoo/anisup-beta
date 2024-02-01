@@ -101,8 +101,8 @@
 .top-anime-top__container{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: calc(var(--index) * 1.4);
+    justify-content: center;
+    gap: calc(var(--index) * 2.1);
     row-gap: calc(var(--index) * 2.8);
     flex-wrap: wrap;
 }
