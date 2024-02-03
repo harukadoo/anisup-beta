@@ -13,7 +13,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background-color: #120A14;
+    background-color: #121212;
     overflow-x: hidden;
 }
 
@@ -52,7 +52,7 @@
     color: #FFC24C;
     margin-top: calc(var(--index) * -1.5);
     padding: 0 calc(var(--index) * 1.2);
-    background-color: #120A14;
+    background-color: #121212;
 }
 
 .top-anime-main-content{

@@ -54,7 +54,7 @@ export const AboutPage = () => {
                                         </div>
 
                                         <div className="support-section__nav">
-                                            <a href="https://github.com/harukadoo">
+                                            <a href="https://github.com/harukadoo/anisup-beta.git">
                                                 <i className="fa-brands fa-github"></i>
                                             </a>
 

@@ -13,7 +13,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background-color: #120A14;
+    background-color: #121212;
     overflow-x: hidden;
 }
 
@@ -47,7 +47,7 @@
 
 .main-content {
     width: 92%;
-    background-color: #120A14;
+    background-color: #121212;
     margin-top: calc(var(--index) * -2.6);
 }
 
@@ -85,7 +85,7 @@
 .main-search__input {
     width: 100%;
     background-color: #ffffff30;
-    border: 3px solid #fff;
+    border: calc(var(--index) * .14) solid #fff;
     font-size: calc(var(--index) * 1);
     font-weight: 600;
     outline-color: #fff;

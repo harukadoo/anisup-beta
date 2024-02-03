@@ -21,7 +21,7 @@ export const Footer = () => {
                     <i className="fa-brands fa-telegram"></i>
                   </a>
   
-                  <a href="https://github.com/harukadoo">
+                  <a href="https://github.com/harukadoo/anisup-beta.git">
                     <i className="fa-brands fa-github"></i>
                   </a>
                 </div>
