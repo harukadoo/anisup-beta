@@ -23,7 +23,7 @@ export const Header = ({ userId }: HeaderProps) => {
       <div className="header__container">
         <div className="header-logo">
           <div className="header-logo__container">
-            AniSup
+            <Link to={`/`}>AniSup</Link>
           </div>
         </div>
 
@@ -31,9 +31,8 @@ export const Header = ({ userId }: HeaderProps) => {
           <div className="header-content__container">
             <div className="header-menu">
               <div className="header-menu__container">
-                <Link to={`/about-us/${userId}`}>about us</Link>
-                <Link to={`/main/${userId}`}>catalog</Link>
-                <Link to={`/top100/${userId}`}>top 100</Link>
+                <Link to={`/about-us`}>about us</Link>
+                <Link to={`/top100`}>top 100</Link>
               </div>
             </div>
 
@@ -58,7 +57,7 @@ export const Header = ({ userId }: HeaderProps) => {
                     />
 
                     <button type="submit" className="header-search__btn">
-                      <Link to={`/search-list/${userId}/${inputValue}`}>
+                      <Link to={`/search-list/${inputValue}`}>
                         <i className="fa-solid fa-magnifying-glass"></i>
                       </Link>
                     </button>

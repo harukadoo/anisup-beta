@@ -5,7 +5,7 @@ import { SignUpPage, SignInPage, MainPage, AboutPage, AnimePage, TopAnimePage, S
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/sign-up',
     element: <SignUpPage />,
   },
   {
@@ -13,31 +13,31 @@ const router = createBrowserRouter([
     element: <SignInPage />,
   },
   {
-    path: '/main/:user',
+    path: '/',
     element: <MainPage />,
   },
   {
-    path: '/search-list/:user/:titles',
+    path: '/search-list/:titles',
     element: <SearchList />,
   },
   {
-    path: '/home/:user',
+    path: '/home',
     element: <HomePage />,
   },
   {
-    path: '/about-us/:user',
+    path: '/about-us',
     element: <AboutPage />,
   },
   {
-    path: '/anime/:user/:id',
+    path: '/anime/:id',
     element: <AnimePage />,
   },
   {
-    path: '/top100/:user',
+    path: '/top100',
     element: <TopAnimePage />,
   },
   {
-    path: '/genre/:user/:genre',
+    path: '/genre/:genre',
     element: <GenrePage />,
   },
 ]);

@@ -14,9 +14,10 @@
     gap: 3vw;
 }
 
-.header-logo__container {
+.header-logo__container a{
     font-size: calc(var(--index) * 1.4);
     font-weight: 700;
+    text-decoration: none;
 }
 
 .header-content {
@@ -38,10 +39,6 @@
     text-decoration: none;
     font-weight: 600;
     font-size: calc(var(--index) * .9);
-}
-
-.header-menu__container a:hover {
-    text-decoration: underline;
 }
 
 .header-navigation__container {

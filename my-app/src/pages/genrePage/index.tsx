@@ -56,30 +56,35 @@ export const GenrePage = () => {
             <div className="genre-inner__container">
                 <Header userId={user} />
 
-                <main className="genre-main">
-                    <div className="genre-main__container">
-                        <div className="genre-main-title">
-                            <div className="genre-main-title__container">
-                                <span></span>
+                <main className="main">
+                    <div className="main__container">
+                        <div className="main-background__container"></div>
 
-                                <div className="genre-main-title__title">Anime-{genre}</div>
-                            </div>
-                        </div>
+                        <div className="main-content">
+                            <div className="main-content__container">
+                                <div className="genre-main-content">
+                                    <div className="genre-main-content__container">
 
-                        <div className="genre-main-content">
-                            <div className="genre-main-content__container">
-                                <div className="genre-anime-list">
-                                    <div className="genre-anime-list__container">
-                                        {genreList.map((anime: Interfaces.IAnimeData, index: number) => (
-                                            <Genre
-                                                key={index}
-                                                id={anime.id}
-                                                title={anime.title}
-                                                score={anime.score}
-                                                image={anime.image}
-                                                userId={user}
-                                            />
-                                        ))}
+                                        <div className="main-title">
+                                            <div className="main-title__container">
+                                                Anime - {genre}
+                                            </div>
+                                        </div>
+
+                                        <div className="genre-anime-list">
+                                            <div className="genre-anime-list__container">
+                                                {genreList.map((anime: Interfaces.IAnimeData, index: number) => (
+                                                    <Genre
+                                                        key={index}
+                                                        id={anime.id}
+                                                        title={anime.title}
+                                                        score={anime.score}
+                                                        image={anime.image}
+                                                        userId={user}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

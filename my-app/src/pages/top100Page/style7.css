@@ -72,11 +72,13 @@
     background: none;
     outline: none;
     border: none;
-    font-size: calc(var(--index) * .9);
+    font-size: calc(var(--index) * 1.2);
     font-weight: 500;
     cursor: pointer;
-    color: #ffe1a5;
+}
 
+.top-anime-main__btn i{
+    color: #fff;
     transition: all .4s ease-out;
     -webkit-transition: all .4s ease-out;
     -moz-transition: all .4s ease-out;
@@ -84,8 +86,8 @@
     -o-transition: all .4s ease-out;
 }
 
-.top-anime-main__btn:hover{
-    opacity: .7;
+.top-anime-main__btn i:hover{ 
+    color: #ffe1a5;
     transition: all .4s ease-out;
     -webkit-transition: all .4s ease-out;
     -moz-transition: all .4s ease-out;
@@ -102,7 +104,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: calc(var(--index) * 2.1);
+    gap: calc(var(--index) * 2.8);
     row-gap: calc(var(--index) * 2.8);
     flex-wrap: wrap;
 }

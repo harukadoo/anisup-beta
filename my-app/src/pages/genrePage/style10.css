@@ -80,7 +80,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: calc(var(--index) * 2.1);
+    row-gap: calc(var(--index) * 2.8);
+    column-gap: calc(var(--index) * 2.8);
     flex-wrap: wrap;
 }
 

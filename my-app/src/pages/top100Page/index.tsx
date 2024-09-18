@@ -27,7 +27,7 @@ export const TopAnimePage = () => {
                         setTopAnime(prevAnime => [...prevAnime, ...filteredData]);
                     })
                     .catch(error => console.error('Помилка при запиті до API:', error));
-    
+
                 return nextPage;
             });
         }
@@ -54,7 +54,7 @@ export const TopAnimePage = () => {
 
     useEffect(() => {
         console.log(topAnime);
-        
+
     }, [topAnime]);
 
     return (
@@ -62,38 +62,43 @@ export const TopAnimePage = () => {
             <div className="inner__container">
                 <Header userId={user} />
 
-                <main className="top-anime-main">
-                    <div className="top-anime-main__container">
-                        <div className="top-anime-main-title">
-                            <div className="top-anime-main-title__container">
-                                <span></span>
-
-                                <div className="top-anime-main-title__title">Top 100 anime</div>
-                            </div>
-                        </div>
+                <main className="main">
+                    <div className="main__container">
+                        <div className="main-background__container"></div>
 
 
-                        <div className="top-anime-main-content">
-                            <div className="top-anime-main-content__container">
-                                <div className="top-anime-top">
-                                    <div className="top-anime-top__container">
-                                        {topAnime.map((anime: Interfaces.IAnimeData, index: number) => (
-                                            <TopAnime
-                                                key={index}
-                                                userId={user}
-                                                id={anime.id}
-                                                title={anime.title}
-                                                score={anime.score}
-                                                image={anime.image}
-                                            />
-                                        ))}
+                        <div className="main-content">
+                            <div className="main-content__container">
+                                <div className="top-anime-main-content">
+                                    <div className="top-anime-main-content__container">
 
+                                        <div className="main-title">
+                                            <div className="main-title__container">
+                                                Top 100
+                                            </div>
+                                        </div>
+
+                                        <div className="top-anime-top">
+                                            <div className="top-anime-top__container">
+                                                {topAnime.map((anime: Interfaces.IAnimeData, index: number) => (
+                                                    <TopAnime
+                                                        key={index}
+                                                        userId={user}
+                                                        id={anime.id}
+                                                        title={anime.title}
+                                                        score={anime.score}
+                                                        image={anime.image}
+                                                    />
+                                                ))}
+
+                                            </div>
+                                        </div>
+
+                                        <button onClick={addPage} className="top-anime-main__btn" style={{ display: page === 4 ? 'none' : 'block' }}>
+                                            <i className="fa-solid fa-angles-down"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-                                <button onClick={addPage} className="top-anime-main__btn" style={{ display: page === 4 ? 'none' : 'block' }}>
-                                    see more..
-                                </button>
                             </div>
                         </div>
                     </div>

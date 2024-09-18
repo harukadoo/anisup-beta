@@ -11,17 +11,6 @@ import { Link, useParams } from "react-router-dom";
 import * as Interfaces from "../types";
 import axios from "axios";
 
-// interface AnimeData {
-//   id: number;
-//   title: string;
-//   jptitle: string;
-//   year: number;
-//   status: string;
-//   score: number;
-//   image: string;
-//   userId: string | undefined;
-// }
-
 type TRecommendedAnime = Omit<Interfaces.IAnimeData, 'score'>
 
 const recommendedAnime = [
@@ -113,7 +102,7 @@ export const MainPage = () => {
                     />
 
                     <button className="main-search__btn">
-                      <Link to={`/search-list/${user}/${inputValue}`}>
+                      <Link to={`/search-list/${inputValue}`}>
                         <i className="fa-solid fa-magnifying-glass"></i>
                       </Link>
                     </button>
@@ -137,7 +126,7 @@ export const MainPage = () => {
 
                     </div>
 
-                    <Link to={`/top100/${user}`} className="popular-anime__link">see more</Link>
+                    <Link to={`/top100`} className="popular-anime__link">see more</Link>
 
                   </div>
                 </div>
