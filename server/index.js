@@ -1,15 +1,26 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const UsersModel = require('./models/Users');
-
+require('dotenv').config();
 
 const app = express();
-const port = 3001
+const port = process.env.PORT || 5000;
+const databaseUrl = process.env.DATABASE_URL;
+
 app.use(express.json());
+app.use(cookieParser());
 app.use(cors());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/anisup');
+mongoose
+.connect(databaseUrl)
+.then(() => {
+  console.log("Connected to MongoDB");
+})
+.catch((error) => {
+  console.error("Failed to connect to MongoDB:", error);
+});
 
 app.post('/sign-in', (request, response) => {
     const { email, password } = request.body;
@@ -269,7 +280,7 @@ app.post('/check-anime-nav/:userId/:animeId', async (request, response) => {
     }
 });
 
-app.listen(process.env.PORT || port, () => {
-    console.log(`Listening on port ${port}`)
-})
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
 

@@ -39,7 +39,7 @@ export const NewAnime = ({ id, title, jptitle, year, status, score, image, userI
 
     return (
         <div className="anime__container">
-            <Link to={`/anime/${userId}/${id}`} className="anime__image">
+            <Link to={`/anime/${id}`} className="anime__image">
                 <img src={image} alt="banner" />
             </Link>
 
